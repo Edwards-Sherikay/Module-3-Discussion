@@ -1,0 +1,33 @@
+public class Dog
+{
+  // Nested class defining Breed Information
+  public class Breed
+  {
+      public string Name { get; }
+      public string Origin { get; }
+
+      public Breed(string name, string origin)
+      {
+          Name = name;
+          Origin = origin;
+      }
+}
+// Optional default values
+public string Name { get; set; }
+public bool LikesBones { get; set; }
+public bool IsFriendly { get; set; }
+public Breed DogBreed { get; set; } // Nullable
+
+// Constructor with all optional parameters
+public Dog(
+    string name,
+    bool likesBones = false,
+    bool isFriendly = true,
+    Breed breed = null)
+{
+    Name = name;
+    LikesBones = likesBones;
+    IsFriendly = isFriendly;
+    DogBreed = breed;
+}
+}
